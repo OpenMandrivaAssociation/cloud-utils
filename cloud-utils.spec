@@ -4,7 +4,7 @@ Release:        %mkrel 1
 License:        GPL3
 Summary:        Cloud image management utilities
 Url:            https://launchpad.net/ubuntu/+source/cloud-utils
-Group:          Productivity/Networking/System
+Group:          Networking/Other
 Source:         cloud-utils_0.19ubuntu1.tar.gz
 BuildRequires:  sed
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
