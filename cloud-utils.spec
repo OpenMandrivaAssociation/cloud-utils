@@ -1,6 +1,6 @@
 Name:           cloud-utils
 Version:        0.19
-Release:        %mkrel 1
+Release:        %mkrel 2
 License:        GPL3
 Summary:        Cloud image management utilities
 Url:            https://launchpad.net/ubuntu/+source/cloud-utils
@@ -9,9 +9,7 @@ Source:         cloud-utils_0.19ubuntu1.tar.gz
 BuildRequires:  sed
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
-
 Requires:       python euca2ools file e2fsprogs >= 1.4  python-yaml python-paramiko
-Requires:       licenses
 
 %description
 This package provides a useful set of utilities for managing cloud
