@@ -46,3 +46,15 @@ done
 %{_bindir}/*
 %{_mandir}/*
 
+
+
+%changelog
+* Thu Jun 09 2011 Antoine Ginies <aginies@mandriva.com> 0.19-2mdv2011.0
++ Revision: 683343
+- remove badrequires on licences
+- fix group
+- import cloud-utils
+
+
+* Wed Jun 8 2011 Antoine Ginies <aginies@mandriva.com> 0.19
+- first release for Mandriva based on OpenSUSE SRPM
