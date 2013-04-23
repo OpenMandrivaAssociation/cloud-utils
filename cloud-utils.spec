@@ -1,13 +1,12 @@
 Name:           cloud-utils
 Version:        0.19
-Release:        %mkrel 2
+Release:        3
 License:        GPL3
 Summary:        Cloud image management utilities
 Url:            https://launchpad.net/ubuntu/+source/cloud-utils
 Group:          Networking/Other
 Source:         cloud-utils_0.19ubuntu1.tar.gz
 BuildRequires:  sed
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 BuildArch:      noarch
 Requires:       python euca2ools file e2fsprogs >= 1.4  python-yaml python-paramiko
 
@@ -37,14 +36,10 @@ cat debian/manpages | while read a; do
 	install -D -m 0644 $a %{buildroot}/usr/share/man/man${section}/$a
 done
 
-%clean
-%{?buildroot:%__rm -rf "%{buildroot}"}
-
 %files
-%defattr(-,root,root)
 %doc debian/copyright debian/changelog
 %{_bindir}/*
-%{_mandir}/*
+%{_mandir}/man1/*
 
 
 
