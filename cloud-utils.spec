@@ -1,7 +1,7 @@
 Summary:	Cloud image management utilities
 Name:		cloud-utils
 Version:	0.27
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Networking/Other
 Url:		https://launchpad.net/ubuntu/+source/cloud-utils
