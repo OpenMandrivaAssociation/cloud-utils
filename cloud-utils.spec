@@ -1,7 +1,7 @@
 Summary:	Cloud image management utilities
 Name:		cloud-utils
 Version:	0.33
-Release:	1
+Release:	2
 License:	GPLv3
 URL:		https://github.com/canonical/cloud-utils
 Source0:	https://github.com/canonical/cloud-utils/archive/refs/tags/%{version}.tar.gz
@@ -24,10 +24,7 @@ with a much simpler interface.
 %package -n growpart
 Summary:	Script for growing a partition
 Requires:	gawk
-# gptfdisk is only required for resizing GPT partitions and depends on libicu
-# (25MB). We don't make this a hard requirement to save some space in non-GPT
-# systems.
-Recommends:	gptfdisk
+Requires:	gptfdisk
 Requires:	util-linux
 %rename %{name}-growpart
 
