@@ -1,7 +1,7 @@
 Summary:	Cloud image management utilities
 Name:		cloud-utils
 Version:	0.33
-Release:	2
+Release:	3
 License:	GPLv3
 URL:		https://github.com/canonical/cloud-utils
 Source0:	https://github.com/canonical/cloud-utils/archive/refs/tags/%{version}.tar.gz
