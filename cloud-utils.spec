@@ -1,8 +1,8 @@
 Summary:	Cloud image management utilities
 Name:		cloud-utils
 Version:	0.33
-Release:	3
-License:	GPLv3
+Release:	4
+License:	GPL-3.0
 URL:		https://github.com/canonical/cloud-utils
 Source0:	https://github.com/canonical/cloud-utils/archive/refs/tags/%{version}.tar.gz
 BuildArch:	noarch
@@ -13,6 +13,9 @@ Requires:	file
 Requires:	python
 Requires:	qemu-img
 Requires:	util-linux
+
+%patchlist
+cloud-utils-0.33-mkisofs.patch
 
 %description
 This package provides a useful set of utilities for managing cloud images.

@@ -1,0 +1,28 @@
+diff -up cloud-utils-0.33/bin/cloud-localds.omv~ cloud-utils-0.33/bin/cloud-localds
+--- cloud-utils-0.33/bin/cloud-localds.omv~	2026-04-26 17:18:47.210121167 +0200
++++ cloud-utils-0.33/bin/cloud-localds	2026-04-26 17:20:34.007602195 +0200
+@@ -146,8 +146,8 @@ case "$filesystem" in
+ 			fail "missing 'mcopy'. Required for --filesystem=vfat."
+ 		;;
+ 	iso9660)
+-		has_cmd genisoimage ||
+-			fail "missing 'genisoimage'.  Required for --filesystem=iso9660."
++		has_cmd genisoimage || has_cmd mkisofs ||
++			fail "missing 'mkisofs' or 'genisoimage'.  Required for --filesystem=iso9660."
+ 		;;
+ 	*) fail "unknown filesystem $filesystem";;
+ esac
+@@ -232,7 +232,12 @@ case "$filesystem" in
+ 			fail "failed to create tarball with $path"
+ 		;;
+ 	iso9660)
+-		genisoimage -output "$img" -volid cidata \
++        if which mkisofs &>/dev/null; then
++            MKISOFS=mkisofs
++        else
++            MKISOFS=genisoimage
++        fi
++		$MKISOFS -output "$img" -volid cidata \
+ 			-joliet -rock "${files[@]}" > "$TEMP_D/err" 2>&1 ||
+ 			{ cat "$TEMP_D/err" 1>&2; fail "failed to genisoimage"; }
+ 		;;
