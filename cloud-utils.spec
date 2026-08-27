@@ -51,7 +51,7 @@ cp bin/* $RPM_BUILD_ROOT/%{_bindir}/
 cp man/* $RPM_BUILD_ROOT/%{_mandir}/man1/
 
 # Exclude Ubuntu-specific tools
-rm $RPM_BUILD_ROOT/%{_bindir}/*ubuntu*
+rm -f $RPM_BUILD_ROOT/%{_bindir}/*ubuntu*
 
 # Exclude the cloud-run-instances manpage
 rm -f $RPM_BUILD_ROOT/%{_mandir}/man1/cloud-run-instances.*
